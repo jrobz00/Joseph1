@@ -16,7 +16,7 @@ const navigation = [
   { name: 'Home', href: '#home' },
   { name: 'Services', href: '#services' },
   { name: 'Portfolio', href: '#portfolio' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Contact', href: '#portfolio' },
 ]
 
 const features = [
@@ -130,10 +130,10 @@ export default function Home() {
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center">
             <a
-              href="#contact"
+              href="/auth"
               className="text-sm font-semibold text-white no-underline hover:scale-105 transition-transform duration-300"
             >
-              Contact <span aria-hidden="true">&rarr;</span>
+              Client Portal <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
         </nav>

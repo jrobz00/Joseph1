@@ -1,12 +1,22 @@
+// src/App.jsx
 import React from "react";
-import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";  // Make sure these paths are correct
 import Hero from "./components/Hero";
+import Dashboard from "./pages/Dashboard";   // Dashboard page from src/pages
+import Auth from "./pages/Auth";             // Auth page (login/register) from src/pages
 
 function App() {
   return (
-    <div className="bg-black min-h-screen">
-      <Hero />
-    </div>
+    <Router>
+      <div className="bg-black min-h-screen">
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/auth" element={<Auth />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
